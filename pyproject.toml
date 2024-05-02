@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "data-pipeline"
+version = "0.1.0"
+description = "Simple base for a data science project."
+authors = ["mikegorski <mike.gorski96@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "data_pipeline", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pandas = "^2.2.2"
+matplotlib = "^3.8.4"
+seaborn = "^0.13.2"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.2.0"
+pre-commit = "^3.7.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.ruff]
+line-length = 120
+select = ["F", "E", "W", "I001"]
